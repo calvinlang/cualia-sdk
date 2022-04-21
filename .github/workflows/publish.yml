@@ -39,12 +39,12 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Setup .npmrc file to publish to GitHub Packages
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@calvinlang'
+      # - name: Setup .npmrc file to publish to GitHub Packages
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '14.x'
+      #     registry-url: 'https://npm.pkg.github.com'
+      #     scope: '@calvinlang'
       # - run: npm run addscope
       - name: Publish to GitHub Packages
         run: npm publish
